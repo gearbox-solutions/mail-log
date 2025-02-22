@@ -1,0 +1,36 @@
+laravel: "@testbench"
+
+providers:
+  - GearboxSolutions\MailLog\Providers\MailLogServiceProvider
+
+migrations:
+  - workbench/database/migrations
+  - database/migrations
+
+seeders:
+  - Workbench\Database\Seeders\DatabaseSeeder
+  - GearboxSolutions\MailLog\Database\Seeders\MailLogSeeder
+
+workbench:
+  welcome: false
+  start: "/mail-log"
+  install: true
+  health: false
+  discovers:
+    web: true
+    api: false
+    commands: true
+    components: false
+    views: true
+    config: true
+  build:
+    - asset-publish
+    - create-sqlite-db
+    - db-wipe
+    - migrate-fresh
+  assets:
+    - laravel-assets
+  sync:
+    - from: storage
+      to: workbench/storage
+      reverse: true

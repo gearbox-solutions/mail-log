@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@plugin "tailwindcss-primeui";
+
+/* source for the welcome page - this can be deleted later */
+@source '../../vendor/orchestra/testbench-core/laravel/resources/views/welcome.blade.php';
