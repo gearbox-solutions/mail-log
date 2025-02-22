@@ -1,0 +1,42 @@
+{
+  "_dayjs.min-NtYHfqg0.js": {
+    "file": "assets/dayjs.min-NtYHfqg0.js",
+    "name": "dayjs.min",
+    "imports": [
+      "resources/js/app.ts"
+    ]
+  },
+  "resources/js/Pages/Mail/MailIndex.vue": {
+    "file": "assets/MailIndex-DVYoo5uZ.js",
+    "name": "MailIndex",
+    "src": "resources/js/Pages/Mail/MailIndex.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.ts",
+      "_dayjs.min-NtYHfqg0.js"
+    ]
+  },
+  "resources/js/Pages/Mail/MailShow.vue": {
+    "file": "assets/MailShow-BdT1JXFW.js",
+    "name": "MailShow",
+    "src": "resources/js/Pages/Mail/MailShow.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_dayjs.min-NtYHfqg0.js",
+      "resources/js/app.ts"
+    ]
+  },
+  "resources/js/app.ts": {
+    "file": "assets/app-aQLUJyJ9.js",
+    "name": "app",
+    "src": "resources/js/app.ts",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/Pages/Mail/MailIndex.vue",
+      "resources/js/Pages/Mail/MailShow.vue"
+    ],
+    "css": [
+      "assets/app-gflgPwOp.css"
+    ]
+  }
+}
