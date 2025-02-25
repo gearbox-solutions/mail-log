@@ -1,4 +1,4 @@
-# Mail Logger
+# Mail Log for Laravel
 
 This is a package built for [Laravel](https://laravel.com/) to log all emails sent from the application. It is built using the following stack:
 

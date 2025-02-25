@@ -12,7 +12,6 @@ export default defineConfig(({ mode }) => {
         build: {
             outDir: "dist/build",
             manifest: "manifest.json",
-            sourcemap: true,
         },
         plugins: [
             VueDevTools({
