@@ -1,21 +1,16 @@
 # Mail Log for Laravel
 
-This is a package built for [Laravel](https://laravel.com/) to log all emails sent from the application. It is built using the following stack:
+[![Total Downloads](https://img.shields.io/packagist/dt/gearbox-solutions/mail-log)](https://packagist.org/packages/gearbox-solutions/mail-log)
+[![Latest Stable Version](https://img.shields.io/packagist/v/gearbox-solutions/mail-log)](https://packagist.org/packages/gearbox-solutions/mail-log)
+[![License](https://img.shields.io/packagist/l/gearbox-solutions/mail-log)](https://github.com/gearbox-solutions/mail-log/blob/2.x/LICENSE)
 
-- [Inertia.js](https://inertiajs.com/)
-- [Vue](https://vuejs.org/)
-- [PrimeVue](https://primevue.org/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [Orchestra Testbench](https://packages.tools/testbench)
+This is a package built for [Laravel](https://laravel.com/) to log all emails sent from your application.
 
-The package should do the following:
+Mail Log provides a user interface to view all emails which have been sent. The default location is `https://yourapp.com/mail-log`, but can be changed.
 
-- Provide a migration to create a new `mail_logs` table in the database to store the emails.
-- add a listener for the `MessageSending` event. This should save the email to the database.
-- add a listener for the `MessageSent` event. This should update the status of the email to sent.
-- Provide a controller and routes to handle the display of the emails in the UI.
-- Provide an artisan command to delete all logged emails from the database.
-- Provide an artisan command to delete all logged emails older than a certain number of days.
+[![An example list view of sent email in the Mail Log package](./docs/images/mail-log-index.webp)](./docs/images/mail-log-index.webp)
+
+[![An example list view of sent email in the Mail Log package](./docs/images/mail-log-detail.webp)](./docs/images/mail-log-detail.webp)
 
 ## Installation
 
@@ -75,6 +70,14 @@ All messages are visible at the `/mail-logs` url. By default, this is protected 
 By default, this package stores all emails sent by your server in the `mail-logs` table of the default database. You can change the database connection used by adjusting the `database` attribute in the published `config/mail-log.php`
 
 ## Development
+
+This package is built using the following stack:
+
+- [Inertia.js](https://inertiajs.com/)
+- [Vue](https://vuejs.org/)
+- [PrimeVue](https://primevue.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Orchestra Testbench](https://packages.tools/testbench)
 
 Developing this package is done using two local servers. The first is the Testbench Laravel server which is used to serve the app. The second is Vite, which builds the front-end assets.
 
