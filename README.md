@@ -12,6 +12,13 @@ Mail Log provides a user interface to view all emails which have been sent. The 
 
 [![An example list view of sent email in the Mail Log package](./docs/images/mail-log-detail.webp)](./docs/images/mail-log-detail.webp?raw=true)
 
+## Support
+
+This package is built and maintained by [Gearbox Solutions](https://gearboxgo.com/). We build fantastic web apps with
+technologies like Laravel, Vue, React, and Node. If you would like assistance building your own web app, either using
+this package or other projects, please [contact us](https://gearboxgo.com/) for a free introductory consultation to
+discuss your project.
+
 ## Installation
 
 Install using composer:
