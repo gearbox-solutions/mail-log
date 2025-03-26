@@ -8,9 +8,9 @@ This is a package built for [Laravel](https://laravel.com/) to log all emails se
 
 Mail Log provides a user interface to view all emails which have been sent. The default location is `https://yourapp.com/mail-log`, but can be changed.
 
-[![An example list view of sent email in the Mail Log package](./docs/images/mail-log-index.webp)](./docs/images/mail-log-index.webp)
+[![An example list view of sent email in the Mail Log package](./docs/images/mail-log-index.webp)](./docs/images/mail-log-index.webp?raw)
 
-[![An example list view of sent email in the Mail Log package](./docs/images/mail-log-detail.webp)](./docs/images/mail-log-detail.webp)
+[![An example list view of sent email in the Mail Log package](./docs/images/mail-log-detail.webp)](./docs/images/mail-log-detail.webp?raw)
 
 ## Installation
 
