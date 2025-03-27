@@ -8,6 +8,8 @@ This is a package built for [Laravel](https://laravel.com/) to log all emails se
 
 Mail Log provides a user interface to view all emails which have been sent. The default location is `https://yourapp.com/mail-log`, but can be changed.
 
+The Mail Log UI and routes are separate from the rest of your app. The assets are all precompiled and frontend-agnostic! It should work fine no matter if you're using Blade, Inertia, React, Vue, or any other frontend.
+
 [![An example list view of sent email in the Mail Log package](./docs/images/mail-log-index.webp)](./docs/images/mail-log-index.webp?raw=true)
 
 [![An example list view of sent email in the Mail Log package](./docs/images/mail-log-detail.webp)](./docs/images/mail-log-detail.webp?raw=true)
