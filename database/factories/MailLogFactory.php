@@ -27,6 +27,7 @@ class MailLogFactory extends Factory
 
         return [
             'message_id' => $this->faker->uuid,
+            'sent_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
             'from_email' => $this->faker->email,
             'from_name' => $this->faker->name,
             'to_email' => $to_email,
@@ -37,7 +38,6 @@ class MailLogFactory extends Factory
             'content_text' => $this->faker->paragraph,
             'headers' => $this->faker->randomElement([null, $this->faker->word]),
             'mailer' => $this->faker->randomElement([null, $this->faker->word]),
-            'sent_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
             'status' => $this->faker->randomElement(['success', 'failed']),
             'error_message' => $this->faker->randomElement([null, $this->faker->sentence]),
             'attachments' => $attachments,

@@ -20,10 +20,9 @@ yarn-error.log
 .DS_Store
 /playwright/.auth
 /playwright-report
-build
+/build
 composer.lock
 coverage
-docs
 phpunit.xml
 phpstan.neon
 vendor
