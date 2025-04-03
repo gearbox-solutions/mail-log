@@ -2,6 +2,10 @@
 
 All notable changes to `:package_name` will be documented in this file.
 
+## 0.0.4 - 2025-04-03
+
+Added @use for vite in app.blade.php
+
 ## 0.0.3 - 2025-04-03
 
 Fixed gitattributes ignoring views and not including them in the distribution bundle
