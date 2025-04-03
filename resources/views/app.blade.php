@@ -1,3 +1,5 @@
+@use('Illuminate\Support\Facades\Vite')
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark bg-surface-50 dark:bg-surface-950">
     <head>
