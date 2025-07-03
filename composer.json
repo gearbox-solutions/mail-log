@@ -45,7 +45,7 @@
             "GearboxSolutions\\MailLog\\Tests\\": "tests/",
             "GearboxSolutions\\MailLog\\Database\\Factories\\": "database/factories/",
             "GearboxSolutions\\MailLog\\Database\\Seeders\\": "database/seeders/",
-            "Workbench\\App\\Console\\Commands\\": "workbench/app/Console/Commands/"
+            "Workbench\\App\\Console\\": "workbench/app/Console/"
         }
     },
     "scripts": {
