@@ -40,6 +40,10 @@ class TestCase extends Orchestra
             $app->singleton(
                 \Illuminate\Contracts\Console\Kernel::class, 'Workbench\App\Console\Kernel'
             );
+        } else {
+            $app->singleton(
+                \Illuminate\Contracts\Console\Kernel::class, \Orchestra\Testbench\Console\Kernel::class
+            );
         }
     }
 }
