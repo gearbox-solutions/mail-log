@@ -22,9 +22,9 @@ class MailLogServiceProvider extends ServiceProvider
     {
 
         // merge configs
-        if (!app()->configurationIsCached()) {
+        if (! app()->configurationIsCached()) {
             $this->mergeConfigFrom(
-                __DIR__ . '/../../config/mail-log.php', 'mail-log'
+                __DIR__.'/../../config/mail-log.php', 'mail-log'
             );
         }
 
@@ -37,22 +37,22 @@ class MailLogServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'mail-log');
-        $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'mail-log');
+        $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
 
         // Fix for Laravel 10+ where publishesMigrations is not available
         if (method_exists($this, 'publishesMigrations')) {
             $this->publishesMigrations([
-                __DIR__ . '/../../database/migrations' => database_path('migrations'),
+                __DIR__.'/../../database/migrations' => database_path('migrations'),
             ], 'mail-log-migrations');
         } else {
             $this->publishes([
-                __DIR__ . '/../../database/migrations' => database_path('migrations'),
+                __DIR__.'/../../database/migrations' => database_path('migrations'),
             ], 'mail-log-migrations');
         }
-        
+
         $this->publishes([
-            __DIR__ . '/../../config/mail-log.php' => config_path('mail-log.php'),
+            __DIR__.'/../../config/mail-log.php' => config_path('mail-log.php'),
         ], 'mail-log-config');
 
         if ($this->app->runningInConsole()) {
