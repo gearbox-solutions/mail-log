@@ -55,6 +55,8 @@ jobs:
         run: |
           if [ -f workbench/Console/Kernel-v${{matrix.laravel}}.php ]; then
             cp workbench/Console/Kernel-v${{ matrix.laravel }}.php app/Console/Kernel.php
+          fi
+
           if [ -f routes/console-v${{matrix.laravel}}.php ]; then
             cp routes/console-v${{matrix.laravel}}.php routes/console.php
           fi
