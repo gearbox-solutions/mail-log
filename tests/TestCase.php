@@ -4,6 +4,7 @@ namespace GearboxSolutions\MailLog\Tests;
 
 use GearboxSolutions\MailLog\Providers\MailLogServiceProvider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Str;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -31,5 +32,14 @@ class TestCase extends Orchestra
             'database' => ':memory:',
             'prefix' => '',
         ]);
+    }
+
+    protected function resolveApplicationConsoleKernel($app)
+    {
+        if(Str::startsWith($app->version(), '10.')) {
+            $app->singleton(
+                \Illuminate\Contracts\Console\Kernel::class, 'Workbench\App\Console\Kernel'
+            );
+        }
     }
 }
