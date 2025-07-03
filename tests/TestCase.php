@@ -33,17 +33,4 @@ class TestCase extends Orchestra
             'prefix' => '',
         ]);
     }
-
-    protected function resolveApplicationConsoleKernel($app)
-    {
-        if (Str::startsWith($app->version(), '10.')) {
-            $app->singleton(
-                \Illuminate\Contracts\Console\Kernel::class, 'Workbench\App\Console\Kernel'
-            );
-        } else {
-            $app->singleton(
-                \Illuminate\Contracts\Console\Kernel::class, \Orchestra\Testbench\Console\Kernel::class
-            );
-        }
-    }
 }
