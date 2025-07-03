@@ -46,11 +46,6 @@ jobs:
           echo "::add-matcher::${{ runner.tool_cache }}/php.json"
           echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
-      - name: Install dependencies
-        run: |
-          composer require "laravel/framework:${{ matrix.laravel }}.*" "orchestra/testbench:${{ matrix.testbench }}" "nesbot/carbon:${{ matrix.os == 'windows-latest' && '^^^' || '' }}${{ matrix.carbon }}" --no-interaction --no-update --no-scripts
-          composer update --${{ matrix.stability }} --prefer-dist --no-interaction
-
       - name: Override default files
         run: |
           if [ -f workbench/Console/Kernel-v${{matrix.laravel}}.php ]; then
@@ -60,6 +55,11 @@ jobs:
           if [ -f routes/console-v${{matrix.laravel}}.php ]; then
             cp routes/console-v${{matrix.laravel}}.php routes/console.php
           fi
+
+      - name: Install dependencies
+        run: |
+          composer require "laravel/framework:${{ matrix.laravel }}.*" "orchestra/testbench:${{ matrix.testbench }}" "nesbot/carbon:${{ matrix.os == 'windows-latest' && '^^^' || '' }}${{ matrix.carbon }}" --no-interaction --no-update --no-scripts
+          composer update --${{ matrix.stability }} --prefer-dist --no-interaction --no-scripts
 
       - name: List Installed Dependencies
         run: composer show -D
