@@ -4,6 +4,7 @@ namespace Workbench\App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+
 use function Orchestra\Testbench\workbench_path;
 
 class Kernel extends ConsoleKernel
